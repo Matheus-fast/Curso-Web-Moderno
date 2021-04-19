@@ -6,7 +6,8 @@
  * funções. Estas funções são conectadas criando uma sequência de processamento assíncrona, permitindo
  * pré-processamento, processamento e pós-processamento de qualquer tipo de dado.
  * 
- * input                   MIDDLEWARE MANAGER                  output
+ *                            MIDDLEWARE MANAGER
+ * input                                                       output
  * -----> MIDDLEWARE A -----> MIDDLEWARE B -----> MIDDLEWARE C -----> 
  * 
  * • Middleware Manager - Responsável por organizar e executar as funções;
