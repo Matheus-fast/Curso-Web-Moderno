@@ -7,19 +7,23 @@
  * pré-processamento, processamento e pós-processamento de qualquer tipo de dado.
  * 
  *                            MIDDLEWARE MANAGER
- * input                                                       output
- * -----> MIDDLEWARE A -----> MIDDLEWARE B -----> MIDDLEWARE C -----> 
- * 
+ * --------------------------------------------------------------------
+ * input                                                       output |
+ * -----> MIDDLEWARE A -----> MIDDLEWARE B -----> MIDDLEWARE C -----> |
+ * --------------------------------------------------------------------
  * • Middleware Manager - Responsável por organizar e executar as funções;
  * • Novos middlewares podem ser invocados usando a função use() (No caso, em express);
  * • Cada unidade no pipeline recebe o resultado da anterior como input;
  * • Cada parte do middleware pode parar o processamento não chamando o callback, ou em caso de erro,
  * passando o erro pelo próprio callback.
  * 
- * input                                   ERROR              output
- * -----> MIDLEWARE A -----> MIDDLEWARE B --X--> MIDDLEWARE C --X-->
- *                                      ⇲              output
- *                                        MIDDLEWARE X -----> 
+ * -------------------------------------------------------------------
+ * input                                   ERROR              output |
+ * -----> MIDLEWARE A -----> MIDDLEWARE B --X--> MIDDLEWARE C --X--> |
+ *                                     ⇲                             |
+ *                                                     output        |
+ *                                        MIDDLEWARE X ----->        |
+ * -------------------------------------------------------------------
  * 
  * No express, o caminho padrão espera os parâmetros request, response e next, caso receba um quarto parâmetro,
  * irá buscar por um caminho diferente. 
