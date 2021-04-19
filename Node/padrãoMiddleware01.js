@@ -11,6 +11,7 @@
  * input                                                       output |
  * -----> MIDDLEWARE A -----> MIDDLEWARE B -----> MIDDLEWARE C -----> |
  * --------------------------------------------------------------------
+ * 
  * • Middleware Manager - Responsável por organizar e executar as funções;
  * • Novos middlewares podem ser invocados usando a função use() (No caso, em express);
  * • Cada unidade no pipeline recebe o resultado da anterior como input;
