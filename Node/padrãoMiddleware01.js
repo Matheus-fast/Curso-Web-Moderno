@@ -13,7 +13,7 @@
  * --------------------------------------------------------------------
  * 
  * • Middleware Manager - Responsável por organizar e executar as funções;
- * • Novos middlewares podem ser invocados usando a função use() (No caso, em express);
+ * • Novos middlewares podem ser invocados usando a função use() (Não obrigatoriamente precisa ser use());
  * • Cada unidade no pipeline recebe o resultado da anterior como input;
  * • Cada parte do middleware pode parar o processamento não chamando o callback, ou em caso de erro,
  * passando o erro pelo próprio callback.
