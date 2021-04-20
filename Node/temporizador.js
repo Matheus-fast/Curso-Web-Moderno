@@ -2,11 +2,11 @@ const schedule = require('node-schedule')
 
 /**
  * /5 - De 5 segundos em 5 segundos
- * * - Qualquer minuto
+ * * - A qualquer minuto
  * 12 - Às 12 horas
- * * - Qualquer dia do mês
- * * - Qualquer mês
- * 2 - Terça feira (0 - domingo, 1 - segunda, 2 - terça, ...)  
+ * * - Em qualquer dia do mês
+ * * - Em qualquer mês
+ * 2 - Toda terça feira (0 - domingo, 1 - segunda, 2 - terça, ...)  
 */
 
 const tarefa = schedule.scheduleJob('*/5 * 12 * * 2', function () {
