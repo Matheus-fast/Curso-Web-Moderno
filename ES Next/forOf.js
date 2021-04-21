@@ -1,7 +1,5 @@
 /**
- * O laço for of itera sobre valores (Array, Map, Set, arguments, etc),
- * chamando uma função personalizada com instruções a serem executadas para
- * o valor de cada objeto distinto. 
+ * O laço for of itera sobre valores (Array, Map, Set, arguments, etc)
  * 
  * @syntax for (variavel of iteravel) { ... }
  * 
