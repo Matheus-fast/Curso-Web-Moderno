@@ -1,13 +1,10 @@
 /**
- * O laço for..in interage sobre propriedades enumeradas de um objeto e
- * somente aquelas enumeráveis herdadas de construtores de objetos prototype, 
- * podendo ser executado para cada propriedade distinta do objeto.
+ * O laço for..in itera sobre índices
  * 
  * @syntax for (variavel in objeto) { ... }
  * 
  * @variavel Uma propriedade diferente do objeto é atribuida em cada iteração
  * @objeto Objeto com as propriedades enumeradas
- * 
  * 
  * Não é recomendado adicionar, remover ou alterar propriedades novas ao objeto
  * durante a executação do laço (durante o loop)
