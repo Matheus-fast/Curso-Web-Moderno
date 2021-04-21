@@ -1,5 +1,5 @@
 /**
- * O laço for of percorre dados iterativos (Array, Map, Set, arguments, etc),
+ * O laço for of itera sobre valores (Array, Map, Set, arguments, etc),
  * chamando uma função personalizada com instruções a serem executadas para
  * o valor de cada objeto distinto. 
  * 
@@ -12,35 +12,40 @@
  * haja modificações dentro do bloco
 */
 
-// Array
-let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
-
-for (const value of array) {
-    if (value % 2 === 0) {
-        console.log(value) // Todos os valores pares serão impressos
-    } else if (value % 3 === 0) {
-        console.log(value) // Todos os valores ímpares serão impressos
-    }
+// Mostrando a diferença de for in e for of
+const assuntosEcma = ['Map', 'Set', 'Promise']
+for (let i in assuntosEcma) {
+    console.log(i) // 0 1 2
 }
 
-// String
-let string = "Boo"
-
-for (const value of string) {
-    console.log(value) // "B" "o" "o"
+for (let assunto of assuntosEcma) {
+    console.log(assunto) // Map Set Promise
 }
 
-// Map
-let map = new Map([["a", 1], ["b", 2], ["c", 3]])
+// Percorrendo um Map de formas diferentes
+const assuntosMap = new Map([
+    ['Map', { abordado: true }],
+    ['Set', { abordado: true }],
+    ['Promise', { abordado: false }]
+])
 
-for (let entry of map) {
-    console.log(entry) // [ 'a', 1 ] [ 'b', 2 ] [ 'c', 3 ]
+for (let assunto of assuntosMap) {
+    console.log(assunto) // [ 'Map', { abordado: true } ] [ 'Set', { abordado: true } ] [ 'Promise', { abordado: false } ]
 }
 
-// Set
-let set = new Set([1, 1, 2, 2, 3, 3])
-
-for (let value of set) {
-    console.log(value) // 1 2 3
+for (let chave of assuntosMap.keys()) { // Map Set Promise
+    console.log(chave)
 }
 
+for (let valor of assuntosMap.values()) {
+    console.log(valor) // { abordado: true } { abordado: true } { abordado: false }
+}
+
+for (let [chave, valor] of assuntosMap.entries()) {
+    console.log(chave, valor) // Map { abordado: true } Set { abordado: true } Promise { abordado: false }
+}
+
+const S = new Set(['a', 'b', 'c'])
+for (let letra of S) {
+    console.log(letra) // a b c
+}
