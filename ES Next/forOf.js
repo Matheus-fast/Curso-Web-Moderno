@@ -1,5 +1,4 @@
 /**
- * O laço for of itera sobre valores
  * O laço for of percorre dados iterativos (Array, Map, Set, arguments, etc),
  * chamando uma função personalizada com instruções a serem executadas para
  * o valor de cada objeto distinto. 
