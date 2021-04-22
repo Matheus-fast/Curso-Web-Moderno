@@ -20,4 +20,4 @@ falarDepoisDe(3, 'Que legal!')
     .then(frase => frase.concat('?!?'))
     .then(outraFrase => console.log(outraFrase)) // Após 3 segundos, a frase Que legal!?!? foi imprimida
 
-// Promises tem a função then e esta é chamada quando a promise é resolvida passando o objeto desejado   
+// Promises tem a função then e esta é chamada quando a promise é resolvida passando o objeto desejado    
