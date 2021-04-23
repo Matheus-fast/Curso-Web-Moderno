@@ -5,7 +5,7 @@
  * 1. A promessa ser cumprida
  * 2. A promessa ser rejeitada
  * 
- * Aceitam apenas um único parâmetro
+ * Ao se criar uma Promise (new Promise()), um objeto será criado
 */
 
 function falarDepoisDe(segundos, frase) {
