@@ -24,4 +24,4 @@ function converterIdadeEmAnosParaDias(pessoa, idade) {
     }
 }
 const Pessoa = new converterIdadeEmAnosParaDias("Gabriel", 25)
-console.log(Pessoa.conversao()) // Gabriel tem 9215 dias de vida.
+console.log(Pessoa.conversao()) // Gabriel tem 9125 dias de vida.
